@@ -21,6 +21,7 @@
 		638831C7201945FE00355347 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638831C5201945FE00355347 /* DetailViewController.xib */; };
 		638831CA2019498B00355347 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638831C82019498B00355347 /* DetailTableViewCell.swift */; };
 		638831CB2019498B00355347 /* DetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 638831C92019498B00355347 /* DetailTableViewCell.xib */; };
+		638831CE20194D7800355347 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638831CD20194D7800355347 /* String.swift */; };
 		63DDE452201934E30086C46B /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDE451201934E30086C46B /* OverviewViewController.swift */; };
 		63DDE4542019350B0086C46B /* OverviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDE4532019350B0086C46B /* OverviewTableDataSource.swift */; };
 		63DDE4572019352C0086C46B /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDE4552019352C0086C46B /* OverviewTableViewCell.swift */; };
@@ -44,6 +45,7 @@
 		638831C5201945FE00355347 /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		638831C82019498B00355347 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		638831C92019498B00355347 /* DetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTableViewCell.xib; sourceTree = "<group>"; };
+		638831CD20194D7800355347 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = String.swift; path = Extensions/String.swift; sourceTree = "<group>"; };
 		63DDE451201934E30086C46B /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewViewController.swift; path = Overview/OverviewViewController.swift; sourceTree = "<group>"; };
 		63DDE4532019350B0086C46B /* OverviewTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableDataSource.swift; path = Overview/OverviewTableDataSource.swift; sourceTree = "<group>"; };
 		63DDE4552019352C0086C46B /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableViewCell.swift; path = Overview/OverviewTableViewCell.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				6374499220192EAC00834F7C /* Managers */,
 				631E10052019413300F5DF1A /* Util */,
 				6374497920192C9400834F7C /* AppDelegate.swift */,
+				638831CC20194D5100355347 /* Extensions */,
 				6374497D20192C9400834F7C /* Main.storyboard */,
 				6374498020192C9400834F7C /* Assets.xcassets */,
 				6374498220192C9400834F7C /* LaunchScreen.storyboard */,
@@ -165,6 +168,14 @@
 				6374499320192EE200834F7C /* JSONParser.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		638831CC20194D5100355347 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				638831CD20194D7800355347 /* String.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		63DDE459201937DD0086C46B /* ViewModel */ = {
@@ -322,6 +333,7 @@
 				63DDE4542019350B0086C46B /* OverviewTableDataSource.swift in Sources */,
 				63DDE45B201938090086C46B /* CryptocurrencyModel.swift in Sources */,
 				638831C3201945E600355347 /* DetailTableDataSource.swift in Sources */,
+				638831CE20194D7800355347 /* String.swift in Sources */,
 				631E10072019414E00F5DF1A /* Constant.swift in Sources */,
 				6374499120192DCF00834F7C /* APILoader.swift in Sources */,
 				638831CA2019498B00355347 /* DetailTableViewCell.swift in Sources */,

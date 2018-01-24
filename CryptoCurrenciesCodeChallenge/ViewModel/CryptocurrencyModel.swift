@@ -25,16 +25,23 @@ struct CryptocurrencyModel {
     
     var marketCapitalization: String {
         // todo put data
-        return "Market capitalization: ..."
+        return "Market capitalization: " + cryptocurrency.market_cap_usd.formatAsCurrencyShortName(currencyCode: "EUR")
     }
     
     var price: String {
-        return "Price: \(cryptocurrency.price_btc)"
+        
+        return "Price: " + cryptocurrency.price_usd.formatAsCurrency(currencyCode: "EUR")
     }
     
     var lastUpdate: String {
-        // todo correct date view
-        return "Last updated: \(cryptocurrency.last_updated)"
+        guard let timeInterval = Int(cryptocurrency.last_updated) else {
+            return ""
+        }
+        let date = NSDate(timeIntervalSince1970: TimeInterval(timeInterval))
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy, HH:mm:ss ZZZZ"
+        
+        return "Last updated: \(dateFormatter.string(from: date as Date))"
     }
     
     var logoImage: UIImage? {

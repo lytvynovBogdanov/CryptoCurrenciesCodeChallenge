@@ -101,6 +101,7 @@
                 <outlet property="logoImageView" destination="Gap-4E-FGE" id="KV3-nm-4ls"/>
                 <outlet property="marketCapitalizationLabel" destination="EjB-ac-cpb" id="KBe-sl-MaM"/>
                 <outlet property="nameLabel" destination="JZM-vf-qKQ" id="2W3-vD-jr2"/>
+                <outlet property="numberLabel" destination="0Lg-0u-hBs" id="8BD-TK-jfl"/>
                 <outlet property="priceLabel" destination="6Lv-kN-ddU" id="e40-nB-Rb2"/>
             </connections>
         </tableViewCell>

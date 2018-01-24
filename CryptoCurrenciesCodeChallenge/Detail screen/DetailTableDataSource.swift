@@ -18,8 +18,8 @@ class DetailTableDataSource: NSObject, UITableViewDataSource {
             return [:]
         }
         return ["Global rank": cryptocurrency.rank,
-                "Last update": cryptocurrency.last_updated,
-                "Price": cryptocurrency.price_btc,
+                "Last update": "",
+                "Price": String(cryptocurrency.price_btc),
                 "1h ∆": "",
                 "24h ∆": "",
                 "7 day ∆": "",

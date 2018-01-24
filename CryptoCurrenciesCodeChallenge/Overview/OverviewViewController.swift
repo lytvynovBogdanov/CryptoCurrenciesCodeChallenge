@@ -12,9 +12,6 @@ import SVProgressHUD
 class OverviewViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activeCurrenciesLabel: UILabel!
-    @IBOutlet weak var bitcoinMarket: UILabel!
-    @IBOutlet weak var lastUpdate: UILabel!
     
     private let tableViewDataSource = OverviewTableDataSource()
     

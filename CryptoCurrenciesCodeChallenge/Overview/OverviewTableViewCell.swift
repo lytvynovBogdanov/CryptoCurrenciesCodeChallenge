@@ -11,6 +11,7 @@ import UIKit
 class OverviewTableViewCell: UITableViewCell {
     
     @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var marketCapitalizationLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -18,6 +19,7 @@ class OverviewTableViewCell: UITableViewCell {
     
     func configure(model: CryptocurrencyModel) {
         logoImageView.image = model.logoImage
+        numberLabel.text = model.rank
         nameLabel.text = model.name
         marketCapitalizationLabel.text = model.marketCapitalization
         priceLabel.text = model.price
