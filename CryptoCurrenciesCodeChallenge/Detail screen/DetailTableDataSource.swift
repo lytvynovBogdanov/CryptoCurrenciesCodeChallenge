@@ -11,7 +11,7 @@ import UIKit
 class DetailTableDataSource: NSObject, UITableViewDataSource {
     var cryptocurrency: Cryptocurrency?
     
-    let cellIdentification = "OverviewTableViewCell"
+    let cellIdentification = "DetailTableViewCell"
     
     var rows: [String: String] {
         guard let cryptocurrency = cryptocurrency else {
@@ -30,7 +30,6 @@ class DetailTableDataSource: NSObject, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rows.count
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

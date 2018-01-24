@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UITableViewDelegate {
 
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = tableViewDataSource
+        tableView.delegate = self
         tableViewDataSource.cryptocurrency = cryptocurrency
         self.updateView()
         registerCell(identifier: tableViewDataSource.cellIdentification)
@@ -43,5 +44,10 @@ class DetailViewController: UIViewController {
         }
         
         tableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 44.0;
     }
 }

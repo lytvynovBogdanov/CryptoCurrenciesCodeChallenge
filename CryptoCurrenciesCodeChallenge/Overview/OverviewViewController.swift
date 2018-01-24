@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class OverviewViewController: UIViewController, UITableViewDelegate {
 
@@ -38,16 +39,20 @@ class OverviewViewController: UIViewController, UITableViewDelegate {
     }
     
     private func updateData() {
-        
+        SVProgressHUD.show(withStatus: "Loading...")
         guard let url = URL(string:COINMARKETCAP_PREFIX + COINMARKETCAP_CURRENCY_EUR + COINMARKETCAP_LIMIT_150) else { return }
         APILoader.stringJSON(url: url, completionSuccess: { (stringJSON) in
             self.tableViewDataSource.cryptocurrencies = JSONParser.cryptocurrencies(inputJSON: stringJSON)
             
             DispatchQueue.main.async{
                 self.tableView.reloadData()
+                SVProgressHUD.dismiss()
             }
             
         }) { (error) in
+            DispatchQueue.main.async{
+                SVProgressHUD.dismiss()
+            }
             self.show(error: error)
         }
     }

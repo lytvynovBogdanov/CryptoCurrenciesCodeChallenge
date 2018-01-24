@@ -23,4 +23,8 @@ class OverviewTableViewCell: UITableViewCell {
         priceLabel.text = model.price
         lastUpdateLabel.text = model.lastUpdate
     }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
 }
