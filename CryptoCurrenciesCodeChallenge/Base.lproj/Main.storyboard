@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-1194" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Overview View Controller-->
         <scene sceneID="iho-Me-AFP">
             <objects>
-                <viewController id="BEp-zz-b37" sceneMemberID="viewController">
+                <viewController id="BEp-zz-b37" customClass="OverviewViewController" customModule="CryptoCurrenciesCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bTz-Ln-uvG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,8 +96,18 @@
                         <viewLayoutGuide key="safeArea" id="KWB-a2-ZsU"/>
                     </view>
                     <navigationItem key="navigationItem" id="9WI-MS-mNh">
-                        <barButtonItem key="rightBarButtonItem" image="update" id="DUg-hm-qhm"/>
+                        <barButtonItem key="rightBarButtonItem" image="update" id="DUg-hm-qhm">
+                            <connections>
+                                <action selector="updatePressed:" destination="BEp-zz-b37" id="19u-06-6kb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="activeCurrenciesLabel" destination="psD-Oz-Wcz" id="f5O-cx-9Eg"/>
+                        <outlet property="bitcoinMarket" destination="Id6-b3-kZP" id="QNa-fW-8Kv"/>
+                        <outlet property="lastUpdate" destination="lLQ-a8-wGC" id="0QQ-sP-PQC"/>
+                        <outlet property="tableView" destination="k0k-6v-Uca" id="LFo-Md-h1l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7YO-xi-JLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

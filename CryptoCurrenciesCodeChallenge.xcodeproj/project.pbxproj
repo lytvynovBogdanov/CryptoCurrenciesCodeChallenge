@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		631E10072019414E00F5DF1A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631E10062019414E00F5DF1A /* Constant.swift */; };
 		6374497A20192C9400834F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374497920192C9400834F7C /* AppDelegate.swift */; };
 		6374497F20192C9400834F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6374497D20192C9400834F7C /* Main.storyboard */; };
 		6374498120192C9400834F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6374498020192C9400834F7C /* Assets.xcassets */; };
@@ -18,9 +19,11 @@
 		63DDE4542019350B0086C46B /* OverviewTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDE4532019350B0086C46B /* OverviewTableDataSource.swift */; };
 		63DDE4572019352C0086C46B /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDE4552019352C0086C46B /* OverviewTableViewCell.swift */; };
 		63DDE4582019352C0086C46B /* OverviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63DDE4562019352C0086C46B /* OverviewTableViewCell.xib */; };
+		63DDE45B201938090086C46B /* CryptocurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DDE45A201938090086C46B /* CryptocurrencyModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		631E10062019414E00F5DF1A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constant.swift; path = Util/Constant.swift; sourceTree = "<group>"; };
 		6374497620192C9400834F7C /* CryptoCurrenciesCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrenciesCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6374497920192C9400834F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6374497E20192C9400834F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		63DDE4532019350B0086C46B /* OverviewTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableDataSource.swift; path = Overview/OverviewTableDataSource.swift; sourceTree = "<group>"; };
 		63DDE4552019352C0086C46B /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewTableViewCell.swift; path = Overview/OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		63DDE4562019352C0086C46B /* OverviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = OverviewTableViewCell.xib; path = Overview/OverviewTableViewCell.xib; sourceTree = "<group>"; };
+		63DDE45A201938090086C46B /* CryptocurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CryptocurrencyModel.swift; path = ViewModel/CryptocurrencyModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		631E10052019413300F5DF1A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				631E10062019414E00F5DF1A /* Constant.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		6374496D20192C9400834F7C = {
 			isa = PBXGroup;
 			children = (
@@ -70,9 +82,10 @@
 				6374498C20192CFC00834F7C /* Detail screen */,
 				6374498D20192D4000834F7C /* Network */,
 				6374498E20192D6500834F7C /* Model */,
-				6374498F20192D7200834F7C /* ModelView */,
-				6374497920192C9400834F7C /* AppDelegate.swift */,
+				63DDE459201937DD0086C46B /* ViewModel */,
 				6374499220192EAC00834F7C /* Managers */,
+				631E10052019413300F5DF1A /* Util */,
+				6374497920192C9400834F7C /* AppDelegate.swift */,
 				6374497D20192C9400834F7C /* Main.storyboard */,
 				6374498020192C9400834F7C /* Assets.xcassets */,
 				6374498220192C9400834F7C /* LaunchScreen.storyboard */,
@@ -116,19 +129,20 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		6374498F20192D7200834F7C /* ModelView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = ModelView;
-			sourceTree = "<group>";
-		};
 		6374499220192EAC00834F7C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				6374499320192EE200834F7C /* JSONParser.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		63DDE459201937DD0086C46B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				63DDE45A201938090086C46B /* CryptocurrencyModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				63DDE4542019350B0086C46B /* OverviewTableDataSource.swift in Sources */,
+				63DDE45B201938090086C46B /* CryptocurrencyModel.swift in Sources */,
+				631E10072019414E00F5DF1A /* Constant.swift in Sources */,
 				6374499120192DCF00834F7C /* APILoader.swift in Sources */,
 				6374497A20192C9400834F7C /* AppDelegate.swift in Sources */,
 				63DDE452201934E30086C46B /* OverviewViewController.swift in Sources */,

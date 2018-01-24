@@ -16,4 +16,11 @@ class OverviewTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var lastUpdateLabel: UILabel!
     
+    func configure(model: CryptocurrencyModel) {
+        logoImageView.image = model.logoImage
+        nameLabel.text = model.name
+        marketCapitalizationLabel.text = model.marketCapitalization
+        priceLabel.text = model.price
+        lastUpdateLabel.text = model.lastUpdate
+    }
 }
