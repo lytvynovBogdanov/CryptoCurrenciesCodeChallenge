@@ -11,6 +11,7 @@
 		6374497F20192C9400834F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6374497D20192C9400834F7C /* Main.storyboard */; };
 		6374498120192C9400834F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6374498020192C9400834F7C /* Assets.xcassets */; };
 		6374498420192C9400834F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6374498220192C9400834F7C /* LaunchScreen.storyboard */; };
+		6374499120192DCF00834F7C /* APILoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374499020192DCF00834F7C /* APILoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		6374498020192C9400834F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6374498320192C9400834F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6374498520192C9400834F7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6374499020192DCF00834F7C /* APILoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APILoader.swift; path = CryptoCurrenciesCodeChallenge/Network/APILoader.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		6374498D20192D4000834F7C /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				6374499020192DCF00834F7C /* APILoader.swift */,
 			);
 			name = Network;
 			path = "Detail screen";
@@ -174,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6374499120192DCF00834F7C /* APILoader.swift in Sources */,
 				6374497A20192C9400834F7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
