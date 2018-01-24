@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6374497A20192C9400834F7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374497920192C9400834F7C /* AppDelegate.swift */; };
-		6374497C20192C9400834F7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6374497B20192C9400834F7C /* ViewController.swift */; };
 		6374497F20192C9400834F7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6374497D20192C9400834F7C /* Main.storyboard */; };
 		6374498120192C9400834F7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6374498020192C9400834F7C /* Assets.xcassets */; };
 		6374498420192C9400834F7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6374498220192C9400834F7C /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		6374497620192C9400834F7C /* CryptoCurrenciesCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCurrenciesCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6374497920192C9400834F7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6374497B20192C9400834F7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6374497E20192C9400834F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6374498020192C9400834F7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6374498320192C9400834F7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,14 +52,54 @@
 		6374497820192C9400834F7C /* CryptoCurrenciesCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				6374498B20192CE800834F7C /* Overview screen */,
+				6374498C20192CFC00834F7C /* Detail screen */,
+				6374498D20192D4000834F7C /* Network */,
+				6374498E20192D6500834F7C /* Model */,
+				6374498F20192D7200834F7C /* ModelView */,
 				6374497920192C9400834F7C /* AppDelegate.swift */,
-				6374497B20192C9400834F7C /* ViewController.swift */,
 				6374497D20192C9400834F7C /* Main.storyboard */,
 				6374498020192C9400834F7C /* Assets.xcassets */,
 				6374498220192C9400834F7C /* LaunchScreen.storyboard */,
 				6374498520192C9400834F7C /* Info.plist */,
 			);
 			path = CryptoCurrenciesCodeChallenge;
+			sourceTree = "<group>";
+		};
+		6374498B20192CE800834F7C /* Overview screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Overview screen";
+			sourceTree = "<group>";
+		};
+		6374498C20192CFC00834F7C /* Detail screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Detail screen";
+			sourceTree = "<group>";
+		};
+		6374498D20192D4000834F7C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
+			path = "Detail screen";
+			sourceTree = "<group>";
+		};
+		6374498E20192D6500834F7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6374498F20192D7200834F7C /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +174,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6374497C20192C9400834F7C /* ViewController.swift in Sources */,
 				6374497A20192C9400834F7C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
