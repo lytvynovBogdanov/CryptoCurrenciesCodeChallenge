@@ -9,5 +9,11 @@
 import UIKit
 
 class OverviewTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var logoImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var marketCapitalizationLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var lastUpdateLabel: UILabel!
+    
 }
