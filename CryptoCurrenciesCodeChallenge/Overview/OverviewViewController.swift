@@ -63,5 +63,8 @@ class OverviewViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+        detailVC.cryptocurrency = tableViewDataSource.cryptocurrencies[indexPath.row]
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

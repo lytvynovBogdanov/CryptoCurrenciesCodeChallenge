@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="CryptoCurrenciesCodeChallenge" customModuleProvider="target">
+            <connections>
+                <outlet property="logoImageView" destination="Mgn-ME-YE6" id="NCb-lO-npu"/>
+                <outlet property="nameLabel" destination="jfQ-mv-g7y" id="5Nl-7a-ycU"/>
+                <outlet property="symbolLabel" destination="95a-Oi-mGa" id="pFP-Gi-SCJ"/>
+                <outlet property="tableView" destination="v0s-Ii-PV8" id="cq6-th-Ie5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Mgn-ME-YE6">
+                    <rect key="frame" x="16" y="64" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="Dvd-c3-yRV"/>
+                        <constraint firstAttribute="width" constant="90" id="dP7-L1-Cwx"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XRP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95a-Oi-mGa">
+                    <rect key="frame" x="114" y="119" width="245" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="pq9-Es-fcm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riddle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jfQ-mv-g7y">
+                    <rect key="frame" x="114" y="76" width="245" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Kr6-Fe-UqZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v0s-Ii-PV8">
+                    <rect key="frame" x="0.0" y="162" width="375" height="442"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mwU-3I-z0u">
+                    <rect key="frame" x="16" y="612" width="343" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="rPx-ve-SXL"/>
+                    </constraints>
+                    <segments>
+                        <segment title="€"/>
+                        <segment title="$"/>
+                        <segment title="£"/>
+                        <segment title="₽"/>
+                        <segment title="¥"/>
+                    </segments>
+                </segmentedControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mwU-3I-z0u" secondAttribute="trailing" constant="16" id="2qF-xN-WV9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jfQ-mv-g7y" secondAttribute="trailing" constant="16" id="3tk-Ag-JoR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="95a-Oi-mGa" secondAttribute="trailing" constant="16" id="42g-3W-wQU"/>
+                <constraint firstItem="95a-Oi-mGa" firstAttribute="leading" secondItem="Mgn-ME-YE6" secondAttribute="trailing" constant="8" id="Aiv-4P-8e8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mwU-3I-z0u" secondAttribute="bottom" constant="20" id="CZj-o2-Nf1"/>
+                <constraint firstItem="v0s-Ii-PV8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Q13-rB-j7R"/>
+                <constraint firstItem="95a-Oi-mGa" firstAttribute="top" secondItem="jfQ-mv-g7y" secondAttribute="bottom" constant="8" id="Tk9-ij-ybw"/>
+                <constraint firstItem="Mgn-ME-YE6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YIj-Vw-agF"/>
+                <constraint firstItem="jfQ-mv-g7y" firstAttribute="leading" secondItem="Mgn-ME-YE6" secondAttribute="trailing" constant="8" id="b9Z-RI-c3Q"/>
+                <constraint firstItem="mwU-3I-z0u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="cax-Vv-3vc"/>
+                <constraint firstItem="v0s-Ii-PV8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jc5-Kb-Cbk"/>
+                <constraint firstItem="mwU-3I-z0u" firstAttribute="top" secondItem="v0s-Ii-PV8" secondAttribute="bottom" constant="8" id="ouX-o8-viR"/>
+                <constraint firstItem="95a-Oi-mGa" firstAttribute="top" secondItem="jfQ-mv-g7y" secondAttribute="bottom" constant="8" id="rxL-rV-rOn"/>
+                <constraint firstItem="v0s-Ii-PV8" firstAttribute="top" secondItem="Mgn-ME-YE6" secondAttribute="bottom" constant="8" id="udg-Tw-xaC"/>
+                <constraint firstItem="jfQ-mv-g7y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="wWt-RE-u3m"/>
+                <constraint firstItem="Mgn-ME-YE6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="zcy-eX-cEx"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

@@ -38,6 +38,6 @@ struct CryptocurrencyModel {
     }
     
     var logoImage: UIImage? {
-        return UIImage(named: cryptocurrency.symbol)
+        return UIImage(named: cryptocurrency.symbol.lowercased())
     }
 }
