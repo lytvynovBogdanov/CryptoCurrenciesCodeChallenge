@@ -40,7 +40,7 @@ class OverviewViewController: UIViewController, UITableViewDelegate {
         guard let url = URL(string:COINMARKETCAP_PREFIX + COINMARKETCAP_CURRENCY_EUR + COINMARKETCAP_LIMIT_150) else { return }
         APILoader.stringJSON(url: url, completionSuccess: { (stringJSON) in
             self.tableViewDataSource.cryptocurrencies = JSONParser.cryptocurrencies(inputJSON: stringJSON)
-            
+            UserDefaults.standard.set(stringJSON, forKey: USER_DEFAULT_JSON)
             DispatchQueue.main.async{
                 self.tableView.reloadData()
                 SVProgressHUD.dismiss()
@@ -51,11 +51,20 @@ class OverviewViewController: UIViewController, UITableViewDelegate {
                 SVProgressHUD.dismiss()
             }
             self.show(error: error)
+            if let stringJSON = UserDefaults.standard.value(forKey: USER_DEFAULT_JSON) as? String {
+                self.tableViewDataSource.cryptocurrencies = JSONParser.cryptocurrencies(inputJSON: stringJSON)
+                DispatchQueue.main.async{
+                    self.tableView.reloadData()
+                }
+            }
+            
         }
     }
     
     private func show(error: Error) {
         let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(alertAction)
         self.present(alertController, animated: true, completion: nil)
     }
     
