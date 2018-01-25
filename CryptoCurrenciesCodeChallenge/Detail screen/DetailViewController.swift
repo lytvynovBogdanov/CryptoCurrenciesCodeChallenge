@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class DetailViewController: UIViewController, UITableViewDelegate {
 
@@ -45,6 +46,51 @@ class DetailViewController: UIViewController, UITableViewDelegate {
         }
         
         tableView.reloadData()
+    }
+    
+    @IBAction func changedCurrency(_ sender: UISegmentedControl) {
+        var currency = COINMARKETCAP_CURRENCY_EUR
+        if sender.selectedSegmentIndex == 1 {
+            currency = COINMARKETCAP_CURRENCY_USD
+        }
+        else if sender.selectedSegmentIndex == 2 {
+            currency = COINMARKETCAP_CURRENCY_GBP
+        }
+        else if sender.selectedSegmentIndex == 3 {
+            currency = COINMARKETCAP_CURRENCY_RUB
+        }
+        else if sender.selectedSegmentIndex == 4 {
+            currency = COINMARKETCAP_CURRENCY_JPY
+        }
+        updateData(currency)
+    }
+    
+    private func updateData(_ currency: String) {
+        guard let id = cryptocurrency?.id else { return }
+        SVProgressHUD.show(withStatus: "Loading...")
+        guard let url = URL(string:COINMARKETCAP_PREFIX + id + "/" + currency) else { return }
+        APILoader.stringJSON(url: url, completionSuccess: { (stringJSON) in
+            let cryptocurrencies = JSONParser.cryptocurrencies(inputJSON: stringJSON)
+            guard let value = cryptocurrencies.first else { return }
+            self.cryptocurrency = value
+            DispatchQueue.main.async{
+                self.updateView()
+                SVProgressHUD.dismiss()
+            }
+            
+        }) { (error) in
+            DispatchQueue.main.async{
+                SVProgressHUD.dismiss()
+            }
+            self.show(error: error)
+        }
+    }
+    
+    private func show(error: Error) {
+        let alertController = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        alertController.addAction(alertAction)
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
