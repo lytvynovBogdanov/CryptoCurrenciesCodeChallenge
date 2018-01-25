@@ -30,22 +30,22 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZM-vf-qKQ">
-                        <rect key="frame" x="8" y="8" width="48" height="25"/>
+                        <rect key="frame" x="8" y="8" width="44" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="MK5-5Q-olt"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="kpq-CL-kuH"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" red="0.34506496790000002" green="0.3451191783" blue="0.34505307670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjB-ac-cpb">
-                        <rect key="frame" x="8" y="41" width="48" height="25"/>
+                        <rect key="frame" x="8" y="41" width="44" height="25"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="kDQ-uA-Owh"/>
                             <constraint firstAttribute="height" constant="25" id="py5-rW-sqt"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" red="0.34506496790000002" green="0.3451191783" blue="0.34505307670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -54,7 +54,7 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="DV5-GK-teL"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" red="0.34506496790000002" green="0.3451191783" blue="0.34505307670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -63,12 +63,12 @@
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="pVk-nv-ijF"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" red="0.34506496790000002" green="0.3451191783" blue="0.34505307670000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gap-4E-FGE">
-                        <rect key="frame" x="64" y="8" width="25" height="25"/>
+                        <rect key="frame" x="60" y="8" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="TbW-FB-buQ"/>
                             <constraint firstAttribute="height" constant="25" id="bkk-dV-QBt"/>

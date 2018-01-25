@@ -21,9 +21,9 @@ class OverviewTableViewCell: UITableViewCell {
         logoImageView.image = model.logoImage
         numberLabel.text = model.rank
         nameLabel.text = model.name
-        marketCapitalizationLabel.text = model.marketCapitalization
+        marketCapitalizationLabel.text = "Market capitalization: " + model.marketCapitalization
         priceLabel.text = model.price
-        lastUpdateLabel.text = model.lastUpdate
+        lastUpdateLabel.text = "Last updated: " + model.lastUpdate
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

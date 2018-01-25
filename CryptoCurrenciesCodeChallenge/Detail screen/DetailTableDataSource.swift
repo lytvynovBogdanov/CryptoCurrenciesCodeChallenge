@@ -17,14 +17,15 @@ class DetailTableDataSource: NSObject, UITableViewDataSource {
         guard let cryptocurrency = cryptocurrency else {
             return [:]
         }
+        let model = CryptocurrencyModel(cryptocurrency: cryptocurrency)
         return ["Global rank": cryptocurrency.rank,
-                "Last update": "",
-                "Price": String(cryptocurrency.price_btc),
-                "1h ∆": "",
-                "24h ∆": "",
-                "7 day ∆": "",
-                "Market capitaliztion": "",
-                "24h volume": ""]
+                "Last update": model.lastUpdate,
+                "Price": String(cryptocurrency.price_usd.formatAsCurrency(currencyCode: "EUR")),
+                "1h ∆": cryptocurrency.percent_change_1h,
+                "24h ∆": cryptocurrency.day_volume_usd,
+                "7 day ∆": cryptocurrency.percent_change_7d,
+                "Market capitaliztion": model.marketCapitalization,
+                "24h volume": cryptocurrency.day_volume_usd]
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

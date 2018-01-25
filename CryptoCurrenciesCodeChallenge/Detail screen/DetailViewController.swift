@@ -35,7 +35,8 @@ class DetailViewController: UIViewController, UITableViewDelegate {
     }
 
     private func updateView() {
-        
+        nameLabel.text = cryptocurrency?.name
+        symbolLabel.text = cryptocurrency?.symbol
         if cryptocurrency?.symbol != nil {
             logoImageView.image = UIImage(named: cryptocurrency!.symbol.lowercased())
         }
